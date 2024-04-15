@@ -6,11 +6,11 @@ Fast calculation of plasma dispersion functions for Maxwellian distribution and 
 
 A fast and accurate approach is provided, where FFT is used.
 
-Ref and cite: Hua-Sheng Xie, Generalized plasma dispersion function: One-solve-all treatment, visualizations, and application to Landau damping,  Phys. Plasmas 20, 092125 (2013), doi: 10.1063/1.4822332.
+Ref and cite: [Xie2013] Hua-Sheng Xie, Generalized plasma dispersion function: One-solve-all treatment, visualizations, and application to Landau damping,  Phys. Plasmas 20, 092125 (2013), doi: 10.1063/1.4822332.
 
 # Maxwellian distribution (i.e., the most widely used)
 
-The plasma dispersion function $Z(z)$ can also be calculated by J-pole Pade approximation (probably the quickest method), i.e.,
+The plasma dispersion function $Z(z)$ can also be calculated by J-pole Pade approximation, i.e.,
 
 $Z(z)={\sum}_{j=1}^{J} \frac{b_j}{z-c_j}$.
 
@@ -40,6 +40,6 @@ where * denotes complex conjugate. The above approximation is valid for the uppe
 
 $Z(z)=[Z(z*)]*+2i\sqrt{\pi}\exp(-z^2)$.
 
-Other J, such as J=4,8,12,16,24 can also be found.
+Other J, such as J=4,8,12,16,24 can also be found. The J-pole method is probably the quickest method to calculate plasma dispersion function, which is accurate better to 1e-6 for J=8, and 1e-13 for J=24. The coding to Fortran and Python is also straightforward.
 
-Ref and cite: Huasheng Xie, BO: A unified tool for plasma waves and instabilities analysis, Computer Physics Communications 244 (2019) 343–371.
+Ref and cite: [Xie2019] Huasheng Xie, BO: A unified tool for plasma waves and instabilities analysis, Computer Physics Communications 244 (2019) 343–371.
