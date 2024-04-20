@@ -90,11 +90,13 @@ elseif(J==24)
     czj(13:24)=-conj(czj(1:12));
 end
 
+Zeta=0.*z;
+
 for j=1:length(z)
     if(imag(z(j))>=0)
-        Zeta=sum(bzj./(z(j)-czj));
+        Zeta(j)=sum(bzj./(z(j)-czj));
     else
-        Zeta=conj(sum(bzj./(conj(z(j))-czj)))+2i*sqrt(pi)*exp(-(z(j))^2);
+        Zeta(j)=conj(sum(bzj./(conj(z(j))-czj)))+2i*sqrt(pi)*exp(-(z(j))^2);
     end
 end
 
